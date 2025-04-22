@@ -21,3 +21,19 @@ Constraints:
 
 1 <= k <= nums.length <= 105
 -104 <= nums[i] <= 104
+
+
+####
+class Solution {
+    public static int findKthLargest(int[] nums, int k) {
+        Arrays.sort(nums);  // Sort the array in ascending order
+        return nums[nums.length - k];  // Kth largest element
+    }
+
+    public static void main(String[] args) {
+        int nums[] = {3, 2, 1, 5, 6, 4}; // Example Array
+        int k = 2; // Find 2nd largest element
+        
+        System.out.println("Kth Largest Element: " + findKthLargest(nums, k));
+    }
+}
